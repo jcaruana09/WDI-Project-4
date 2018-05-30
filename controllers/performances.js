@@ -43,10 +43,43 @@ function performanceDelete(req, res, next){
     .catch(next);
 }
 
+function reviewsCreate(req, res, next){
+  Performance
+    .findById(req.params.id)
+    .populate('reviews.user')
+    .exec()
+    .then(performance => {
+      performance.reviews.push(req.body);
+      return performance.save();
+    })
+    .then(performance => res.json(performance))
+    .catch(next);
+}
+
+function reviewsDelete(req, res, next){
+  Performance
+    .findById(req.params.id)
+    .populate('reviews.user')
+    .exec()
+    .then(performance => {
+      const review = performance.reviews.id(req.params.reviewId);
+
+      // if(!review.user._id.equals(req.currentUser._id)) {
+      //   throw new Error('Unauthorized');
+      // }
+      review.remove();
+      return performance.save();
+    })
+    .then(performance => res.json(performance))
+    .catch(next);
+}
+
 module.exports = {
   index: performanceIndex,
   create: performanceCreate,
   show: performanceShow,
   update: performanceUpdate,
-  delete: performanceDelete
+  delete: performanceDelete,
+  reviewCreate: reviewsCreate,
+  reviewDelete: reviewsDelete
 };
