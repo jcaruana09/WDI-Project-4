@@ -1,12 +1,18 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import SortFilterPerformances from './SortFilterPerformances';
+import _ from 'lodash';
 
 // const APIKEY = 'hagpkg48ywufnu8yhshk959z';
 
 class PerformancesIndex extends React.Component {
 
-  state = { performances: [] }
+  state = {
+    performances: [],
+    search: '',
+    sort: 'name|asc'
+  }
   // componentDidMount() {
   //   axios.get('https://api.londontheatredirect.com/rest/v2/Events', {
   //     headers: {
@@ -21,14 +27,30 @@ class PerformancesIndex extends React.Component {
       .then(res => this.setState({ performances: res.data }));
   }
 
+  handleChange = ({ target: { name, value }}) => {
+    this.setState({ [name]: value });
+  }
+
+  sortedFilteredPerformances = () => {
+    const [field, dir] = this.state.sort.split('|');
+    const re = new RegExp(this.state.search, 'i');
+    const filtered = _.filter(this.state.performances, performance => {
+      return re.test(performance.name) || re.test(performance.venue);
+    });
+    return _.orderBy(filtered, field, dir);
+  }
+
   render() {
-    console.log(this.state.performances);
     return(
       <div>
         <h1>Performance Index</h1>
+        <SortFilterPerformances
+          handleChange={this.handleChange}
+          data={this.state}
+        />
         <ul>
           <div className="columns is-multiline">
-            {this.state.performances.map(function(performance) {
+            {this.sortedFilteredPerformances().map(performance => {
               return <div className="column is-one-third-desktop is-half-tablet" key={performance._id}>
                 <li>
                   <Link to={`/performances/${performance._id}`}>

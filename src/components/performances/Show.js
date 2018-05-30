@@ -60,14 +60,14 @@ class PerformanceShow extends React.Component {
         <div className="posts-container">
           <p className="title is-2">Posts</p>
           <div className="card">
-          {this.state.performance.reviews.map(review =>
-            <div key={review._id}>
-              <p>{review.rating}/5</p>
-              <p>{review.review}</p>
-              <p>{review.user}</p>
-              <button className="button" onClick={() => this.handleReviewDelete(review._id)}>Delete</button>
-            </div>
-          )}
+            {this.state.performance.reviews.map(review =>
+              <div key={review._id}>
+                <p>{review.rating}/5</p>
+                <p>{review.review}</p>
+                <p>{review.user}</p>
+                <button className="button" onClick={() => this.handleReviewDelete(review._id)}>Delete</button>
+              </div>
+            )}
           </div>
           <form onSubmit={this.handleReviewSubmit}>
             <input className="input" type="text" placeholder="Add Rating" name="rating" onChange={this.handleReviewChange} />
