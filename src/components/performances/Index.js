@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // const APIKEY = 'hagpkg48ywufnu8yhshk959z';
 
@@ -31,19 +31,21 @@ class PerformancesIndex extends React.Component {
             {this.state.performances.map(function(performance) {
               return <div className="column is-one-third-desktop is-half-tablet" key={performance._id}>
                 <li>
-                  <div className="card">
-                    <div className="card-image">
-                      <figure className="image is-4by3">
-                        <img src={performance.image} />
-                      </figure>
-                    </div>
-                    <div className="card-content">
-                      <div className="media-content">
-                        <p className="title is-5">{performance.name}</p>
-                        <p className="subtitle is-6">{performance.venue}</p>
+                  <Link to={`/performances/${performance._id}`}>
+                    <div className="card">
+                      <div className="card-image">
+                        <figure className="image is-4by3">
+                          <img src={performance.image} />
+                        </figure>
+                      </div>
+                      <div className="card-content">
+                        <div className="media-content">
+                          <p className="title is-5">{performance.name}</p>
+                          <p className="subtitle is-6">{performance.venue}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               </div>;
             })}

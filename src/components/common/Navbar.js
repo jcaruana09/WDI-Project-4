@@ -20,6 +20,7 @@ const Navbar = (props) => {
       <div className="navbar-menu">
         <div className="navbar-end">
           <Link to="/performances" className="navbar-item">Shows</Link>
+          <Link to="/performances/new" className="navbar-item">Add Show</Link>
           {Auth.isAuthenticated() && <a onClick={handleLogout}
             className="navbar-item">Logout</a>}
           {!Auth.isAuthenticated() && <Link to="/register"
