@@ -18,6 +18,7 @@ import AuthRegister from './components/auth/Register';
 import AuthLogin from './components/auth/Login';
 
 import 'bulma';
+import './scss/style.scss';
 
 class App extends React.Component {
   render() {

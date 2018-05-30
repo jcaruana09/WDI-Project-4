@@ -1,0 +1,35 @@
+.hero-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 440px;
+  margin-bottom: 22px;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.8);
+  float: right;
+  height: 100%;
+  padding: 5px 50px;
+  width: 40%;
+}
+
+.hero-time, .hero-venue, .hero-description {
+  color: #ffffff;
+  float: right;
+  text-align: right;
+}
+
+.hero-title p {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.hero-details p {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.posts-container .title {
+  text-align: center;
+}

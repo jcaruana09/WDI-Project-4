@@ -40,27 +40,35 @@ class PerformanceShow extends React.Component {
       <div>
 
         <p className="title is-1">{performance.name}</p>
-        <p className="subtitle is-3">{performance.venue}</p>
-        <p className="subtitle is-5">{performance.runningTime} minutes</p>
-        <div className="hero-image">
-          <img src={performance.image} />
+        <div className="hero-image" style={{ backgroundImage: `url(${performance.image})`}}>
+          <div className="hero-content">
+            <div className="hero-title">
+              <p className="hero-venue">{performance.venue}</p>
+            </div>
+            <p className="hero-description">{performance.description}</p>
+            <div className="hero-details">
+              <p className="hero-time">Running Time: {performance.runningTime} Minutes</p>
+            </div>
+          </div>
+          <Link
+            to={`/performances/${performance._id}/edit`}
+            className="button"
+          >Edit</Link>
+          <button className="button" onClick={this.handleDelete}>Delete</button>
         </div>
-        <p>{performance.description}</p>
-        <Link
-          to={`/performances/${performance._id}/edit`}
-          className="button"
-        >Edit</Link>
-        <button className="button" onClick={this.handleDelete}>Delete</button>
 
         <div className="posts-container">
+          <p className="title is-2">Posts</p>
+          <div className="card">
           {this.state.performance.reviews.map(review =>
-            <div className="card" key={review._id}>
+            <div key={review._id}>
               <p>{review.rating}/5</p>
               <p>{review.review}</p>
               <p>{review.user}</p>
               <button className="button" onClick={() => this.handleReviewDelete(review._id)}>Delete</button>
             </div>
           )}
+          </div>
           <form onSubmit={this.handleReviewSubmit}>
             <input className="input" type="text" placeholder="Add Rating" name="rating" onChange={this.handleReviewChange} />
             <input className="input" type="text" placeholder="Add Content" name="review" onChange={this.handleReviewChange} />
