@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import SortFilterPerformances from './SortFilterPerformances';
 import _ from 'lodash';
 
-// const APIKEY = 'hagpkg48ywufnu8yhshk959z';
-
 class PerformancesIndex extends React.Component {
 
   state = {
@@ -13,14 +11,6 @@ class PerformancesIndex extends React.Component {
     search: '',
     sort: 'name|asc'
   }
-  // componentDidMount() {
-  //   axios.get('https://api.londontheatredirect.com/rest/v2/Events', {
-  //     headers: {
-  //       'Api-Key': APIKEY
-  //     }
-  //   })
-  //     .then(res => this.setState({ performances: res.data }));
-  // }
 
   componentDidMount() {
     axios.get('/api/performances')
@@ -50,8 +40,8 @@ class PerformancesIndex extends React.Component {
         />
         <ul>
           <div className="columns is-multiline">
-            {this.sortedFilteredPerformances().map(performance => {
-              return <div className="column is-one-third-desktop is-half-tablet" key={performance._id}>
+            {this.sortedFilteredPerformances().map(performance =>
+              <div className="column is-one-third-desktop is-half-tablet" key={performance._id}>
                 <li>
                   <Link to={`/performances/${performance._id}`}>
                     <div className="card">
@@ -69,8 +59,8 @@ class PerformancesIndex extends React.Component {
                     </div>
                   </Link>
                 </li>
-              </div>;
-            })}
+              </div>
+            )}
           </div>
         </ul>
       </div>

@@ -1,3 +1,7 @@
+body {
+  background-color: #000000;
+}
+
 .hero-image {
   background-size: cover;
   background-position: center;
@@ -32,4 +36,9 @@
 
 .posts-container .title {
   text-align: center;
+}
+
+figure .home-image {
+  height: 150px;
+  width: 150px;
 }

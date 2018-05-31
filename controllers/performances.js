@@ -9,9 +9,11 @@ function performanceIndex(req, res, next){
 }
 
 function performanceCreate(req, res, next){
-  // req.body.createdBy = req.currentUser;
-  Performance
-    .create(req.body)
+  Performance.findOne({ ltdId: req.body.ltdId })
+    .then(performance => {
+      if(!performance) return Performance.create(req.body);
+      return performance;
+    })
     .then(performance => res.json(performance))
     .catch(next);
 }

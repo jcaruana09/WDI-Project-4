@@ -7,10 +7,11 @@ const reviewSchema = new mongoose.Schema({
 });
 
 const performanceSchema = new mongoose.Schema({
+  ltdId: Number,
   name: String,
   startDate: Date,
   endDate: Date,
-  runningTime: Number,
+  runningTime: String,
   venue: String,
   image: String,
   description: String,

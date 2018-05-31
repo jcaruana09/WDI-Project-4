@@ -13,7 +13,6 @@ import Navbar from './components/common/Navbar';
 import PerformancesIndex from './components/performances/Index';
 import PerformancesNew from './components/performances/New';
 import PerformanceShow from './components/performances/Show';
-import PerformanceEdit from './components/performances/Edit';
 import AuthRegister from './components/auth/Register';
 import AuthLogin from './components/auth/Login';
 
@@ -30,7 +29,6 @@ class App extends React.Component {
             <div className="container">
               <Switch>
                 <Route path="/performances/new" component={PerformancesNew} />
-                <Route path="/performances/:id/edit" component={PerformanceEdit} />
                 <Route path="/performances/:id" component={PerformanceShow} />
                 <Route path="/performances" component={PerformancesIndex} />
                 <Route path="/login" component={AuthLogin} />
