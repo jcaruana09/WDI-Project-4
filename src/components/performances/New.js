@@ -85,7 +85,7 @@ class PerformancesNew extends React.Component {
       <div>
         <form>
           <div className="field">
-            <input className="input" placeholder="Search" onChange={this.handleSearch}/>
+            <input id="search-input" className="input" placeholder="Search" onChange={this.handleSearch}/>
           </div>
         </form>
         {this.state.loading && <div>Loading...</div>}

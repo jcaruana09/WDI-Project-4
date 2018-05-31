@@ -14,7 +14,7 @@ const Navbar = (props) => {
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
           <img src="https://seeklogo.com/images/T/Theater_Masks-logo-8C9D2AD393-seeklogo.com.png" />
-          <h1>Theatre Review</h1>
+          <h1>Theatre Critic</h1>
         </Link>
       </div>
       <div className="navbar-menu">

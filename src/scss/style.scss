@@ -6,7 +6,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 440px;
+  height: 618px;
   margin-bottom: 22px;
 }
 
@@ -25,6 +25,7 @@ body {
 }
 
 .hero-title p {
+  font-family: 'Montserrat', sans-serif;
   font-size: 25px;
   padding-bottom: 20px;
 }
@@ -38,7 +39,93 @@ body {
   text-align: center;
 }
 
-figure .home-image {
+.home-image {
+  filter: grayscale(100%);
   height: 150px;
-  width: 150px;
+  margin-right: 0;
+  width: 250px;
+}
+
+.home-image:hover {
+  filter: grayscale(0);
+  height: 150px;
+  margin-right: 0;
+  width: 250px;
+}
+
+// Home
+.home-title {
+  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 60px;
+}
+
+.home-shows {
+  display: block;
+  margin-top: 17px;
+}
+
+.home-shows, .home-login, .home-register {
+  text-align: center;
+}
+
+.home-nav {
+  position: absolute;
+  bottom: 65px;
+  a {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: inherit;
+    padding: 20px;
+  }
+  a:hover {
+    background-color: #888888;
+  }
+}
+
+// New Performance
+
+.field #search-input {
+  margin-bottom: 20px;
+}
+
+// Show performance
+
+.posts-container {
+  border-right: 2px solid #ffffff;
+}
+
+.posts-card, .new-form {
+  background-color: #000000;
+  color: #ffffff;
+  // width: 400px;
+}
+
+.input, .select select, select {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.input::-webkit-input-placeholder, .select select {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.posts-info p {
+  text-align: center;
+}
+
+.show-title, .posts-title {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.show-title {
+  font-size: 36px;
+  text-align: left;
 }

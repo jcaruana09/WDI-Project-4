@@ -9,7 +9,7 @@ const SortFilterPerformances = ({ handleChange, data }) => {
       <div className="field column is-5">
         <div className="control">
           <div className="select">
-            <select onChange={handleChange} name="sort" value={data.sort}>
+            <select className="input" onChange={handleChange} name="sort" value={data.sort}>
               <option value="name|asc">Name (A - Z)</option>
               <option value="name|desc">Name (Z - A)</option>
             </select>

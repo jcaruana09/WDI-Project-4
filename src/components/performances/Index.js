@@ -33,7 +33,6 @@ class PerformancesIndex extends React.Component {
   render() {
     return(
       <div>
-        <h1>Performance Index</h1>
         <SortFilterPerformances
           handleChange={this.handleChange}
           data={this.state}
