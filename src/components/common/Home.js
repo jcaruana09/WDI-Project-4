@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
   return(
-    <div>
+    <div className="home-section">
       <div className="columns">
         <div className="column is-one-quarter">
           <p className="home-title">Theatre Critic</p>
@@ -29,7 +29,13 @@ const Home = () => {
               <img className="home-image" src="https://www.londontheatredirect.com/images/Event/ThePlayThatGoesWrong/The-Play-That-Goes-Wrong-9491.jpg" />
             </div>
             <div className="column is-one-third">
+              <img className="home-image" src="https://www.londontheatredirect.com/images/Event/MammaMia/Mamma-Mia-13360.jpg" />
+            </div>
+            <div className="column is-one-third">
               <img className="home-image" src="https://media.londontheatredirect.com/Event/TINATheTinaTurnerMusical/event-list-image_15796.jpg" />
+            </div>
+            <div className="column is-one-third">
+              <img className="home-image" src="https://media.londontheatredirect.com/Event/Red/event-list-image_15316.jpg" />
             </div>
             <div className="column is-one-third">
               <img className="home-image" src="https://media.londontheatredirect.com/Event/ImperiumIConspirator/event-list-image_15447.jpg" />
@@ -43,11 +49,14 @@ const Home = () => {
             <div className="column is-one-third">
               <img className="home-image" src="https://www.londontheatredirect.com/images/Event/MotownTheMusical/Motown-The-Musical-9807.jpg" />
             </div>
+            <div className="column is-one-third">
+              <img className="home-image" src="https://www.londontheatredirect.com/images/Event/MatildaTheMusical/Matilda-The-Musical-8144.jpg" />
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Home;

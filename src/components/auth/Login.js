@@ -31,7 +31,7 @@ class AuthLogin extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className="auth-container">
         <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="field">
@@ -43,7 +43,7 @@ class AuthLogin extends React.Component {
             <input className="input" type="password" onChange={this.handleChange} />
           </div>
           <div className="control">
-            <button className="button is-primary">Submit</button>
+            <button className="button">Submit</button>
           </div>
         </form>
       </div>

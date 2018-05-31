@@ -72,19 +72,21 @@ class PerformanceShow extends React.Component {
             </div>
           </div>
           <div className="column is-two-fifths">
-            <p className="posts-title">Create Post</p>
-            <form className="new-form" onSubmit={this.handleReviewSubmit}>
-              <select className="input" type="text" placeholder="Add Rating" name="rating" onChange={this.handleReviewChange}>
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-              <input className="input" type="text" placeholder="Add Content" name="review" onChange={this.handleReviewChange} />
-              <button className="button">Create Post</button>
-            </form>
+            <div className="create-post-container">
+              <p className="posts-title">Create Post</p>
+              <form className="new-form" onSubmit={this.handleReviewSubmit}>
+                <select className="input" type="text" placeholder="Add Rating" name="rating" onChange={this.handleReviewChange}>
+                  <option></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                <input className="input" type="text" placeholder="Add Content" name="review" onChange={this.handleReviewChange} />
+                <button className="button">Create Post</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

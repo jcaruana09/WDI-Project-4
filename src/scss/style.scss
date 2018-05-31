@@ -39,6 +39,8 @@ body {
   text-align: center;
 }
 
+// Home
+
 .home-image {
   filter: grayscale(100%);
   height: 150px;
@@ -53,7 +55,11 @@ body {
   width: 250px;
 }
 
-// Home
+.home-section {
+  background-color: #000000;
+  height: 716px;
+}
+
 .home-title {
   text-decoration: underline;
   font-family: 'Montserrat', sans-serif;
@@ -92,6 +98,11 @@ body {
 
 // Show performance
 
+.create-post-container {
+  vertical-align: middle;
+  position: relative;
+}
+
 .posts-container {
   border-right: 2px solid #ffffff;
 }
@@ -129,3 +140,5 @@ body {
   font-size: 36px;
   text-align: left;
 }
+
+// Auth

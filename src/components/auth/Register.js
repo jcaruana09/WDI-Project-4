@@ -48,7 +48,7 @@ class AuthRegister extends React.Component {
             <input className="input" type="password" onChange={this.handleChange} />
           </div>
           <div className="control">
-            <button className="button is-primary">Submit</button>
+            <button className="button">Submit</button>
           </div>
         </form>
       </div>
