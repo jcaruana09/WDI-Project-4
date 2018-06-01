@@ -163,6 +163,7 @@ body {
 
 .posts-container {
   border-right: 2px solid #ffffff;
+  min-height: 200px;
 }
 
 .posts-container .title {
@@ -209,6 +210,16 @@ body {
   background-color: #ffffff;
   padding: 50px 78px;
   margin: 18px 190px;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    padding: 10px;
+    text-align: right;
+  }
+  label {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 200;
+  }
   .input{
     background-color: #ffffff;
     color: #000000;

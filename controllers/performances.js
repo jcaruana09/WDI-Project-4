@@ -46,6 +46,9 @@ function performanceDelete(req, res, next){
 }
 
 function reviewsCreate(req, res, next){
+
+  req.body.createdBy = req.currentUser;
+
   Performance
     .findById(req.params.id)
     .populate('reviews.user')

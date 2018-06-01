@@ -4,6 +4,7 @@ import _ from 'lodash';
 import Promise from 'bluebird';
 import striptags from 'striptags';
 import decode from 'unescape';
+import Auth from '../../lib/Auth';
 
 class PerformancesNew extends React.Component {
 
@@ -63,20 +64,15 @@ class PerformancesNew extends React.Component {
     this.setState({ search: value });
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(this.state);
-    axios.post('/api/performances', this.state)
-      .then(() => this.props.history.push('/performances'));
-  }
-
   filteredPerformances = () => {
     const re = new RegExp(this.state.search, 'i');
     return _.filter(this.state.performances, performance => re.test(performance.name));
   }
 
   addPerformance = (performance) => {
-    axios.post('/api/performances', performance)
+    axios.post('/api/performances', performance, {
+      headers: { Authorization: `Bearer ${Auth.getToken()}` }
+    })
       .then(() => this.props.history.push('/performances'));
   }
 

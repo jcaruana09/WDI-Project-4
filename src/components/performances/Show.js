@@ -1,5 +1,6 @@
 import React from 'react';
 import axios  from 'axios';
+import Auth from '../../lib/Auth';
 // import { Link } from 'react-router-dom';
 
 class PerformanceShow extends React.Component {
@@ -7,7 +8,6 @@ class PerformanceShow extends React.Component {
   state = {}
 
   componentDidMount() {
-    // console.log(this.props.match.params.id);
     axios.get(`/api/performances/${this.props.match.params.id}`)
       .then(res => this.setState({ performance: res.data }));
   }
@@ -35,7 +35,7 @@ class PerformanceShow extends React.Component {
   render() {
     const { performance } = this.state;
     if(!performance) return null;
-    console.log(this.state.performance.reviews);
+    console.log('this.state.performance.reviews', this.state);
     return(
       <div>
         <p className="show-title">{performance.name}</p>
@@ -64,14 +64,14 @@ class PerformanceShow extends React.Component {
                   <div className="posts-info" key={review._id}>
                     <p>{review.rating}/5</p>
                     <p>{review.review}</p>
-                    <p>{review.user}</p>
+                    <p>{review._id}</p>
                     <button className="button" onClick={() => this.handleReviewDelete(review._id)}>Delete</button>
                   </div>
                 )}
               </div>
             </div>
           </div>
-          <div className="column is-two-fifths">
+          {Auth.isAuthenticated() && <div className="column is-two-fifths">
             <div className="create-post-container">
               <p className="posts-title">Create Post</p>
               <form className="new-form" onSubmit={this.handleReviewSubmit}>
@@ -87,7 +87,7 @@ class PerformanceShow extends React.Component {
                 <button className="button">Create Post</button>
               </form>
             </div>
-          </div>
+          </div>}
         </div>
       </div>
     );

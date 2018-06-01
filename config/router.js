@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const performances = require('../controllers/performances');
 const auth = require('../controllers/auth');
+const secureRoute = require('../lib/secureRoute');
 
 router.route('/performances')
   .get(performances.index)
-  .post(performances.create);
+  .post(secureRoute, performances.create);
 
 router.route('/performances/:id')
   .get(performances.show)

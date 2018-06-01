@@ -12,7 +12,7 @@ function register(req, res, next){
         token,
         user
       });
-
+      console.log('TOKEN====>',token);
     })
     .catch(next);
 }
@@ -33,6 +33,7 @@ function login(req, res, next){
         token,
         user
       });
+      console.log(token);
     })
     .catch(next);
 }

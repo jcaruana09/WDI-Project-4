@@ -17,6 +17,7 @@ class AuthLogin extends React.Component {
     // this.state = form data
     axios.post('/api/login', this.state)
       .then(res => {
+        console.log('res.data.token', res.data.token);
         Auth.setToken(res.data.token);
         Flash.setMessage('info', res.data.message);
       })
@@ -32,15 +33,25 @@ class AuthLogin extends React.Component {
   render(){
     return(
       <div className="auth-section">
-        <h1>Login</h1>
         <form className="auth-card" onSubmit={this.handleSubmit}>
+          <h1>Login</h1>
           <div className="field">
             <label className="label">Email</label>
-            <input className="input" type="text" placeholder="JohnDoe09@gmail.com" onChange={this.handleChange} />
+            <input
+              className="input"
+              type="text" name="email"
+              placeholder="JohnDoe09@gmail.com"
+              onChange={this.handleChange}
+            />
           </div>
           <div className="field">
             <label className="label">Password</label>
-            <input className="input" type="password" onChange={this.handleChange} />
+            <input
+              className="input"
+              type="password"
+              name="password"
+              onChange={this.handleChange}
+            />
           </div>
           <div className="control">
             <button className="button">Submit</button>
