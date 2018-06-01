@@ -13,7 +13,7 @@ router.route('/performances/:id')
   .put(performances.update)
   .delete(performances.delete);
 
-router.delete('/performances/:id/reviews/:reviewId', performances.reviewDelete);
+router.delete('/performances/:id/reviews/:reviewId', secureRoute, performances.reviewDelete);
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);
