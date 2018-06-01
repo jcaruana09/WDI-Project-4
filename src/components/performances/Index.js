@@ -40,19 +40,23 @@ class PerformancesIndex extends React.Component {
         <ul>
           <div className="columns is-multiline">
             {this.sortedFilteredPerformances().map(performance =>
-              <div className="column is-one-third-desktop is-half-tablet" key={performance._id}>
+              <div className="column is-half-desktop is-half-tablet" key={performance._id}>
                 <li>
                   <Link to={`/performances/${performance._id}`}>
-                    <div className="card">
-                      <div className="card-image">
-                        <figure className="image is-4by3">
-                          <img src={performance.image} />
-                        </figure>
-                      </div>
-                      <div className="card-content">
-                        <div className="media-content">
-                          <p className="title is-5">{performance.name}</p>
-                          <p className="subtitle is-6">{performance.venue}</p>
+                    <div className="index-hero-image" style={{ backgroundImage: `url(${performance.image})`}}>
+                      <div className="index-hero-content">
+                        <div className="columns is-multiline">
+                          <div className="column is-two-thirds">
+                            <div className="index-hero-title">
+                              <p>{performance.name}</p>
+                            </div>
+                            <div className="index-hero-details">
+                              <p className="index-hero-venue">{performance.venue}</p>
+                            </div>
+                          </div>
+                          <div className="column is-one-third">
+                            <p className="index-hero-time">{performance.runningTime}</p>
+                          </div>
                         </div>
                       </div>
                     </div>

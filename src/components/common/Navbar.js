@@ -14,18 +14,17 @@ const Navbar = (props) => {
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
-          <img src="https://seeklogo.com/images/T/Theater_Masks-logo-8C9D2AD393-seeklogo.com.png" />
           <h1>Theatre Critic</h1>
         </Link>
       </div>
       <div className="navbar-menu">
         <div className="navbar-end">
-          <Link to="/performances" className="navbar-item">Shows</Link>
-          <Link to="/performances/new" className="navbar-item">Add Show</Link>
+          <Link to="/performances" id="nav-item-1" className="navbar-item">Shows</Link>
+          <Link to="/performances/new" id="nav-item-2" className="navbar-item">Add Show</Link>
           {Auth.isAuthenticated() && <a onClick={handleLogout}
             className="navbar-item">Logout</a>}
           {!Auth.isAuthenticated() && <Link to="/register"
-            className="navbar-item">Register</Link>}
+            className="navbar-item" id="nav-item-3">Register</Link>}
           {!Auth.isAuthenticated() && <Link to="/login"
             className="navbar-item">Login</Link>}
         </div>

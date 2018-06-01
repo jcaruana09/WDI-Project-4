@@ -77,7 +77,7 @@ class PerformancesNew extends React.Component {
 
   addPerformance = (performance) => {
     axios.post('/api/performances', performance)
-      .then(res => this.props.history.push(`/performances/${res.data._id}`));
+      .then(() => this.props.history.push('/performances'));
   }
 
   render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Flash {
+class Flash extends React.Component {
 
   static _messages = null;
 

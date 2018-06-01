@@ -31,9 +31,9 @@ class AuthLogin extends React.Component {
 
   render(){
     return(
-      <div className="auth-container">
+      <div className="auth-section">
         <h1>Login</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form className="auth-card" onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="label">Email</label>
             <input className="input" type="text" placeholder="JohnDoe09@gmail.com" onChange={this.handleChange} />

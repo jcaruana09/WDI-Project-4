@@ -76,7 +76,7 @@ class PerformanceShow extends React.Component {
               <p className="posts-title">Create Post</p>
               <form className="new-form" onSubmit={this.handleReviewSubmit}>
                 <select className="input" type="text" placeholder="Add Rating" name="rating" onChange={this.handleReviewChange}>
-                  <option></option>
+                  <option>Select Rating:</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>

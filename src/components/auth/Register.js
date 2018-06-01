@@ -28,9 +28,9 @@ class AuthRegister extends React.Component {
 
   render(){
     return(
-      <div>
-        <h1>Register</h1>
-        <form onSubmit={this.handleSubmit}>
+      <div className="auth-section">
+        <form className="auth-card" onSubmit={this.handleSubmit}>
+          <h1>Register</h1>
           <div className="field">
             <label className="label">Username</label>
             <input className="input" type="text" placeholder="JohnDoe09" onChange={this.handleChange} />
