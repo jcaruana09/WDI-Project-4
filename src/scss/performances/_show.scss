@@ -1,0 +1,93 @@
+.create-post-container {
+  vertical-align: middle;
+  position: relative;
+}
+
+.posts-container {
+  border-right: 2px solid #ffffff;
+  min-height: 200px;
+}
+
+.posts-container .title {
+  text-align: center;
+}
+
+.posts-card, .new-form {
+  background-color: #000000;
+  color: #ffffff;
+  // width: 400px;
+}
+
+.input, .select select, select {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.input::-webkit-input-placeholder, .select select {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.posts-info p {
+  text-align: center;
+}
+
+.show-title, .posts-title {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.show-title {
+  font-size: 36px;
+  text-align: left;
+}
+
+.create-posts-title {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  margin-left: 125px;
+  margin-top: 80px;
+}
+
+.create-posts-title:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.hero-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 618px;
+  margin-bottom: 22px;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.8);
+  float: right;
+  height: 100%;
+  padding: 5px 50px;
+  width: 40%;
+}
+
+.hero-time, .hero-venue, .hero-description {
+  color: #ffffff;
+  float: right;
+  text-align: right;
+}
+
+.hero-title p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.hero-details p {
+  font-size: 20px;
+  padding-top: 20px;
+}

@@ -18,6 +18,12 @@ import AuthLogin from './components/auth/Login';
 
 import 'bulma';
 import './scss/style.scss';
+import './scss/common/_home.scss';
+import './scss/common/_auth.scss';
+import './scss/components/_navbar.scss';
+import './scss/performances/_index.scss';
+import './scss/performances/_new.scss';
+import './scss/performances/_show.scss';
 
 class App extends React.Component {
 

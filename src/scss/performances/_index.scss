@@ -1,0 +1,28 @@
+.index-hero-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 354px;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.index-hero-content {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  height: 30%;
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.index-hero-title {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  display: inline;
+}
+
+.index-hero-venue, .index-hero-time {
+  color: #ffffff;
+}

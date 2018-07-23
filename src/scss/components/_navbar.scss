@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #000000;
+  a {
+    color: #ffffff;
+    font-size: 20px;
+  }
+  a:hover {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 46px;
+  }
+}
+
+#nav-item-1, #nav-item-2, #nav-item-3 {
+  border-right: 2px solid #ffffff;
+  margin: 20px 0;
+}
